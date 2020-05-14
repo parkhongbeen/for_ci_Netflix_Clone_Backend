@@ -14,6 +14,7 @@ class Contents(models.Model):
     is_movie = models.BooleanField(default=True)
     preview_video = models.URLField(_('미리보기 영상'), null=True)
 
+
     actors = models.ManyToManyField('contents.Actor',
                                     related_name='contents',
                                     verbose_name=_('출연 배우'))
