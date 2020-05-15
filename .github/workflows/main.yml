@@ -13,13 +13,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
-    - name: install poetry
+    - name: Install poetry
       run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 
-    - name: Run a one-line script
-      run: echo Hello, world!
-
-    - name: Run a multi-line script
+    - name: Poetry export requirements
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        ~/.poetry/bin/poetry export -f requirements.txt -> requirements.txt
+        cat requirements.txt
