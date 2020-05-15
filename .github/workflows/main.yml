@@ -30,7 +30,7 @@ jobs:
     - name: Poetry export requirements.txt
       run: ~/.poetry/bin/poetry export -f requirements.txt > requirements.txt
       
-    - name: Install Python Pakage
+    - name: Install dependency
       run: ~/.poetry/bin/poetry install
       
     - name: pytest-cov
