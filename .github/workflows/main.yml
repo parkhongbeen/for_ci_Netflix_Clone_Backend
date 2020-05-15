@@ -15,8 +15,8 @@ jobs:
       
     - name: pip install -U subprocess32
       run: |
-        pip uninstall subprocess32
-        pip install -U subprocess32
+          pip uninstall subprocess32
+          pip install -U subprocess32
         
     - name: Install poetry
       run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
