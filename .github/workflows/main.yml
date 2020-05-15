@@ -32,10 +32,10 @@ jobs:
       
     - name: Install dependency
       run: ~/.poetry/bin/poetry install
-      
-    - name: pytest-cov
+  
+    - name: run test
       run: ~/.poetry/bin/poetry run pytest --cov app
-      
+            
     - name: codecov
       run: ~/.poetry/bin/poetry run codecov
 
