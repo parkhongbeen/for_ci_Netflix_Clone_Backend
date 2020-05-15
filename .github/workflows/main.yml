@@ -32,13 +32,13 @@ jobs:
       
     - name: Install dependency
       run: ~/.poetry/bin/poetry install
-      
+    
     - shell: bash
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.aws_access_key_id }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.aws_secret_access_key }}
-        AWS_PROFILE: netflex-secrets-manager  
-      run: ehco"$AWS_PROFILE""
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID}}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
+        AWS_PROFILE: netflex-secrets-manager
+      run: echo "$AWS_PROFILE"    
     
     - name: run test
       run: ~/.poetry/bin/poetry run pytest --cov app
