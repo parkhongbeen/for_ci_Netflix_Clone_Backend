@@ -25,8 +25,6 @@ try:
 except KeyError:
     session = boto3.Session(profile_name="netflex-secrets-manager")
 
-
-session = boto3.Session(profile_name="netflex-secrets-manager")
 secretsManager = session.client(
     service_name='secretsmanager',
     region_name='ap-northeast-2'
